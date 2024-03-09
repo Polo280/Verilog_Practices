@@ -1,28 +1,35 @@
 module ClockDivider(
 	input clk, rst, 
 	output reg clk_div,
-	output reg [25:0]num1
+	output reg [25:0]num,
+	output wire [6:0] d1, d2, d3, d4, d5, d6
 );
 
 localparam target_count = 50_000_000;
 reg [29:0] count;
 
 SevenSegmentDisplay SevSegment(
-	.number(num1)
+	.number(num),
+	.digit1(d1),
+	.digit2(d2),
+	.digit3(d3),
+	.digit4(d4),
+	.digit5(d5),
+	.digit6(d6)
 );
 
 always @(posedge clk or negedge rst)
 begin
 	if(!rst) begin
 		count <= 30'b0;
-		num1 <= 0;
+		num <= 0;
 	end
 	else if(count == target_count -1) begin 
-		num1 <= num1 + 1;
+		num <= num + 1;
 		count <= 30'b0; 
 	end
 	else begin
-		num1 <= num1;
+		num <= num;
 		count <= count + 1;
 	end
 end
