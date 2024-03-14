@@ -1,0 +1,38 @@
+module ClockDivider(
+	input clk, rst, pause, switch,
+	output reg clk_div,
+	output wire [6:0] d1, d2, d3, d4, d5, d6
+);
+
+localparam target_count = 50_000_000 / 2;
+reg [29:0] count;
+
+always @(posedge clk or negedge rst)
+begin
+	if(!rst) begin
+		count <= 30'b0;
+		num <= 0;
+	end
+	else if(count == target_count -1) begin 
+		count <= 30'b0; 
+	end
+	else begin
+		count <= count + 1;
+	end
+end
+
+always @(posedge clk or negedge rst)
+begin
+	if(!rst) begin
+		clk_div <= 1'b0;
+	end
+	else if(count == target_count - 1)
+		begin
+			clk_div <= ~clk_div;
+		end
+	else begin
+		clk_div <= clk_div;   // Refrescar los registros para no perder la informacion
+	end
+end
+
+endmodule 
