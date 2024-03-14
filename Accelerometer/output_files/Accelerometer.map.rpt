@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Accelerometer
-Wed Mar 13 20:19:57 2024
+Thu Mar 14 13:52:33 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -70,15 +70,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 13 20:19:57 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 14 13:52:33 2024       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Accelerometer                               ;
 ; Top-level Entity Name              ; accel                                       ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,885                                       ;
-;     Total combinational functions  ; 1,833                                       ;
-;     Dedicated logic registers      ; 208                                         ;
-; Total registers                    ; 208                                         ;
+; Total logic elements               ; 1,842                                       ;
+;     Total combinational functions  ; 1,788                                       ;
+;     Dedicated logic registers      ; 210                                         ;
+; Total registers                    ; 210                                         ;
 ; Total pins                         ; 79                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -194,37 +194,37 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; hdl/spi_serdes.v                 ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/hdl/spi_serdes.v            ;         ;
-; hdl/spi_control.v                ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/hdl/spi_control.v           ;         ;
-; accel.v                          ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v                     ;         ;
-; seg7.v                           ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/seg7.v                      ;         ;
-; PLL.v                            ; yes             ; User Wizard-Generated File   ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/PLL.v                       ;         ;
-; output_files/Averager.v          ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/output_files/Averager.v     ;         ;
-; output_files/ClockDivider.v      ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/output_files/ClockDivider.v ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/pll_altpll.v             ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_rll.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/lpm_divide_rll.tdf       ;         ;
-; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/sign_div_unsign_qlh.tdf  ;         ;
-; db/alt_u_div_uhe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf        ;         ;
-; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/add_sub_t3c.tdf          ;         ;
-; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/add_sub_u3c.tdf          ;         ;
-; db/lpm_divide_otl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/lpm_divide_otl.tdf       ;         ;
-; db/lpm_divide_rtl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/lpm_divide_rtl.tdf       ;         ;
-; db/sign_div_unsign_tlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/sign_div_unsign_tlh.tdf  ;         ;
-; db/alt_u_div_4ie.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_4ie.tdf        ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; hdl/spi_serdes.v                 ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/hdl/spi_serdes.v            ;         ;
+; hdl/spi_control.v                ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/hdl/spi_control.v           ;         ;
+; accel.v                          ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v                     ;         ;
+; seg7.v                           ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/seg7.v                      ;         ;
+; PLL.v                            ; yes             ; User Wizard-Generated File   ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/PLL.v                       ;         ;
+; output_files/Averager.v          ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/output_files/Averager.v     ;         ;
+; output_files/ClockDivider.v      ; yes             ; User Verilog HDL File        ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/output_files/ClockDivider.v ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf                              ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                          ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_pll.inc                         ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratixii_pll.inc                       ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/cycloneii_pll.inc                       ;         ;
+; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/pll_altpll.v             ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                     ;         ;
+; db/lpm_divide_rll.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/lpm_divide_rll.tdf       ;         ;
+; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/sign_div_unsign_qlh.tdf  ;         ;
+; db/alt_u_div_uhe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf        ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/add_sub_t3c.tdf          ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/add_sub_u3c.tdf          ;         ;
+; db/lpm_divide_otl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/lpm_divide_otl.tdf       ;         ;
+; db/lpm_divide_rtl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/lpm_divide_rtl.tdf       ;         ;
+; db/sign_div_unsign_tlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/sign_div_unsign_tlh.tdf  ;         ;
+; db/alt_u_div_4ie.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_4ie.tdf        ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -232,20 +232,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 1,885        ;
+; Estimated Total logic elements              ; 1,842        ;
 ;                                             ;              ;
-; Total combinational functions               ; 1833         ;
+; Total combinational functions               ; 1788         ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 420          ;
-;     -- 3 input functions                    ; 483          ;
-;     -- <=2 input functions                  ; 930          ;
+;     -- 4 input functions                    ; 376          ;
+;     -- 3 input functions                    ; 525          ;
+;     -- <=2 input functions                  ; 887          ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 1288         ;
+;     -- normal mode                          ; 1243         ;
 ;     -- arithmetic mode                      ; 545          ;
 ;                                             ;              ;
-; Total registers                             ; 208          ;
-;     -- Dedicated logic registers            ; 208          ;
+; Total registers                             ; 210          ;
+;     -- Dedicated logic registers            ; 210          ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 79           ;
@@ -256,9 +256,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
-; Maximum fan-out                             ; 147          ;
-; Total fan-out                               ; 5516         ;
-; Average fan-out                             ; 2.50         ;
+; Maximum fan-out                             ; 145          ;
+; Total fan-out                               ; 5526         ;
+; Average fan-out                             ; 2.56         ;
 +---------------------------------------------+--------------+
 
 
@@ -267,10 +267,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                    ; Entity Name         ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |accel                                 ; 1833 (0)            ; 208 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 79   ; 0            ; 0          ; |accel                                                                                                 ; accel               ; work         ;
-;    |Averager:AVG_MODULE_X|             ; 86 (86)             ; 47 (47)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |accel|Averager:AVG_MODULE_X                                                                           ; Averager            ; work         ;
-;    |Averager:AVG_MODULE_Y|             ; 64 (64)             ; 39 (39)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |accel|Averager:AVG_MODULE_Y                                                                           ; Averager            ; work         ;
-;    |ClockDivider:CLOCK_DIV|            ; 47 (47)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |accel|ClockDivider:CLOCK_DIV                                                                          ; ClockDivider        ; work         ;
+; |accel                                 ; 1788 (0)            ; 210 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 79   ; 0            ; 0          ; |accel                                                                                                 ; accel               ; work         ;
+;    |Averager:AVG_MODULE_X|             ; 66 (66)             ; 48 (48)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |accel|Averager:AVG_MODULE_X                                                                           ; Averager            ; work         ;
+;    |Averager:AVG_MODULE_Y|             ; 40 (40)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |accel|Averager:AVG_MODULE_Y                                                                           ; Averager            ; work         ;
+;    |ClockDivider:CLOCK_DIV|            ; 46 (46)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |accel|ClockDivider:CLOCK_DIV                                                                          ; ClockDivider        ; work         ;
 ;    |PLL:ip_inst|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |accel|PLL:ip_inst                                                                                     ; PLL                 ; work         ;
 ;       |altpll:altpll_component|        ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |accel|PLL:ip_inst|altpll:altpll_component                                                             ; altpll              ; work         ;
 ;          |PLL_altpll:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |accel|PLL:ip_inst|altpll:altpll_component|PLL_altpll:auto_generated                                   ; PLL_altpll          ; work         ;
@@ -390,26 +390,18 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------+--------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                 ;
-+-------------------------------------+---------------------------+---------------------------------------------------------------------------+
-; Register name                       ; Reason for Removal        ; Registers Removed due to This Register                                    ;
-+-------------------------------------+---------------------------+---------------------------------------------------------------------------+
-; Averager:AVG_MODULE_X|total_sum[30] ; Lost Fanouts              ; Averager:AVG_MODULE_X|total_sum[29], Averager:AVG_MODULE_X|total_sum[28], ;
-;                                     ;                           ; Averager:AVG_MODULE_X|total_sum[27], Averager:AVG_MODULE_X|total_sum[26], ;
-;                                     ;                           ; Averager:AVG_MODULE_X|total_sum[25], Averager:AVG_MODULE_X|total_sum[24], ;
-;                                     ;                           ; Averager:AVG_MODULE_X|total_sum[23]                                       ;
-; Averager:AVG_MODULE_Y|total_sum[30] ; Lost Fanouts              ; Averager:AVG_MODULE_Y|total_sum[29], Averager:AVG_MODULE_Y|total_sum[28], ;
-;                                     ;                           ; Averager:AVG_MODULE_Y|total_sum[27], Averager:AVG_MODULE_Y|total_sum[26], ;
-;                                     ;                           ; Averager:AVG_MODULE_Y|total_sum[25], Averager:AVG_MODULE_Y|total_sum[24], ;
-;                                     ;                           ; Averager:AVG_MODULE_Y|total_sum[23]                                       ;
-; spi_control:spi_ctrl|data_tx[7]     ; Stuck at GND              ; spi_control:spi_ctrl|spi_serdes:serdes|data_tx_reg[7]                     ;
-;                                     ; due to stuck port data_in ;                                                                           ;
-; spi_control:spi_ctrl|data_tx[14]    ; Stuck at GND              ; spi_control:spi_ctrl|spi_serdes:serdes|data_tx_reg[14]                    ;
-;                                     ; due to stuck port data_in ;                                                                           ;
-; spi_control:spi_ctrl|data_tx[13]    ; Stuck at VCC              ; spi_control:spi_ctrl|spi_serdes:serdes|data_tx_reg[13]                    ;
-;                                     ; due to stuck port data_in ;                                                                           ;
-+-------------------------------------+---------------------------+---------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                           ;
++----------------------------------+---------------------------+--------------------------------------------------------+
+; Register name                    ; Reason for Removal        ; Registers Removed due to This Register                 ;
++----------------------------------+---------------------------+--------------------------------------------------------+
+; spi_control:spi_ctrl|data_tx[7]  ; Stuck at GND              ; spi_control:spi_ctrl|spi_serdes:serdes|data_tx_reg[7]  ;
+;                                  ; due to stuck port data_in ;                                                        ;
+; spi_control:spi_ctrl|data_tx[14] ; Stuck at GND              ; spi_control:spi_ctrl|spi_serdes:serdes|data_tx_reg[14] ;
+;                                  ; due to stuck port data_in ;                                                        ;
+; spi_control:spi_ctrl|data_tx[13] ; Stuck at VCC              ; spi_control:spi_ctrl|spi_serdes:serdes|data_tx_reg[13] ;
+;                                  ; due to stuck port data_in ;                                                        ;
++----------------------------------+---------------------------+--------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -417,9 +409,9 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 208   ;
-; Number of registers using Synchronous Clear  ; 33    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 210   ;
+; Number of registers using Synchronous Clear  ; 79    ;
+; Number of registers using Synchronous Load   ; 46    ;
 ; Number of registers using Asynchronous Clear ; 54    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 150   ;
@@ -432,13 +424,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |accel|Averager:AVG_MODULE_Y|average_val[6]             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |accel|spi_control:spi_ctrl|data_tx[12]                 ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |accel|spi_control:spi_ctrl|data_tx[10]                 ;
-; 4:1                ; 38 bits   ; 76 LEs        ; 38 LEs               ; 38 LEs                 ; Yes        ; |accel|Averager:AVG_MODULE_X|count[2]                   ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |accel|Averager:AVG_MODULE_X|total_sum[2]               ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |accel|spi_control:spi_ctrl|spi_serdes:serdes|count[3]  ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |accel|spi_control:spi_ctrl|spi_serdes:serdes|Selector6 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |accel|spi_control:spi_ctrl|data_tx[8]                  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |accel|Averager:AVG_MODULE_X|average_val[7]             ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |accel|Averager:AVG_MODULE_Y|average_val[1]             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |accel|Averager:AVG_MODULE_X|count[0]                   ;
+; 4:1                ; 62 bits   ; 124 LEs       ; 124 LEs              ; 0 LEs                  ; Yes        ; |accel|Averager:AVG_MODULE_Y|total_sum[15]              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |accel|spi_control:spi_ctrl|spi_serdes:serdes|count[0]  ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |accel|spi_control:spi_ctrl|spi_serdes:serdes|Selector5 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
@@ -1143,29 +1136,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 79                          ;
-; cycloneiii_ff         ; 208                         ;
+; cycloneiii_ff         ; 210                         ;
 ;     CLR               ; 50                          ;
-;     ENA               ; 114                         ;
+;     ENA               ; 70                          ;
 ;     ENA CLR           ; 4                           ;
-;     ENA SCLR          ; 32                          ;
-;     SCLR              ; 1                           ;
+;     ENA SCLR          ; 30                          ;
+;     ENA SCLR SLD      ; 46                          ;
+;     SCLR              ; 3                           ;
 ;     plain             ; 7                           ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 1841                        ;
+; cycloneiii_lcell_comb ; 1796                        ;
 ;     arith             ; 545                         ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 89                          ;
-;         3 data inputs ; 452                         ;
-;     normal            ; 1296                        ;
+;         2 data inputs ; 77                          ;
+;         3 data inputs ; 464                         ;
+;     normal            ; 1251                        ;
 ;         0 data inputs ; 107                         ;
-;         1 data inputs ; 46                          ;
-;         2 data inputs ; 692                         ;
-;         3 data inputs ; 31                          ;
-;         4 data inputs ; 420                         ;
+;         1 data inputs ; 44                          ;
+;         2 data inputs ; 663                         ;
+;         3 data inputs ; 61                          ;
+;         4 data inputs ; 376                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 34.10                       ;
-; Average LUT depth     ; 24.98                       ;
+; Average LUT depth     ; 25.29                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1184,51 +1178,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 13 20:19:44 2024
+    Info: Processing started: Thu Mar 14 13:52:20 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Accelerometer -c Accelerometer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file test/spi_serdes_tb.v
-    Info (12023): Found entity 1: spi_serdes_tb File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/test/spi_serdes_tb.v Line: 2
+    Info (12023): Found entity 1: spi_serdes_tb File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/test/spi_serdes_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file test/spi_secondary_mimic.v
-    Info (12023): Found entity 1: spi_secondary_mimic File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/test/spi_secondary_mimic.v Line: 5
+    Info (12023): Found entity 1: spi_secondary_mimic File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/test/spi_secondary_mimic.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file test/spi_control_tb.v
-    Info (12023): Found entity 1: spi_control_tb File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/test/spi_control_tb.v Line: 2
+    Info (12023): Found entity 1: spi_control_tb File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/test/spi_control_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file test/file_reader.v
-    Info (12023): Found entity 1: file_reader File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/test/file_reader.v Line: 1
+    Info (12023): Found entity 1: file_reader File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/test/file_reader.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/spi_serdes.v
-    Info (12023): Found entity 1: spi_serdes File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/hdl/spi_serdes.v Line: 1
+    Info (12023): Found entity 1: spi_serdes File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/hdl/spi_serdes.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/spi_control.v
-    Info (12023): Found entity 1: spi_control File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/hdl/spi_control.v Line: 1
+    Info (12023): Found entity 1: spi_control File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/hdl/spi_control.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file accel.v
-    Info (12023): Found entity 1: accel File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 9
-Warning (10229): Verilog HDL Expression warning at seg7.v(32): truncated literal to match 7 bits File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/seg7.v Line: 32
+    Info (12023): Found entity 1: accel File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 9
+Warning (10229): Verilog HDL Expression warning at seg7.v(32): truncated literal to match 7 bits File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/seg7.v Line: 32
 Info (12021): Found 1 design units, including 1 entities, in source file seg7.v
-    Info (12023): Found entity 1: seg7 File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/seg7.v Line: 1
+    Info (12023): Found entity 1: seg7 File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/seg7.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
-    Info (12023): Found entity 1: PLL File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/PLL.v Line: 40
+    Info (12023): Found entity 1: PLL File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/PLL.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file pll_2.v
-    Info (12023): Found entity 1: PLL_2 File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/PLL_2.v Line: 40
+    Info (12023): Found entity 1: PLL_2 File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/PLL_2.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file memory_ram.v
-    Info (12023): Found entity 1: memory_RAM File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/memory_RAM.v Line: 1
+    Info (12023): Found entity 1: memory_RAM File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/memory_RAM.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/averager.v
-    Info (12023): Found entity 1: Averager File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/output_files/Averager.v Line: 1
+    Info (12023): Found entity 1: Averager File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/output_files/Averager.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/clockdivider.v
-    Info (12023): Found entity 1: ClockDivider File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/output_files/ClockDivider.v Line: 1
+    Info (12023): Found entity 1: ClockDivider File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/output_files/ClockDivider.v Line: 1
 Info (12127): Elaborating entity "accel" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at accel.v(118): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 118
-Warning (10230): Verilog HDL assignment warning at accel.v(119): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 119
-Warning (10230): Verilog HDL assignment warning at accel.v(120): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 120
-Warning (10230): Verilog HDL assignment warning at accel.v(122): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 122
-Warning (10230): Verilog HDL assignment warning at accel.v(123): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 123
-Warning (10230): Verilog HDL assignment warning at accel.v(124): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 124
-Warning (10034): Output port "LEDR[8..0]" at accel.v(27) has no driver File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 27
-Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:CLOCK_DIV" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 63
-Warning (10230): Verilog HDL assignment warning at ClockDivider.v(19): truncated value with size 32 to match size of target (30) File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/output_files/ClockDivider.v Line: 19
-Info (12128): Elaborating entity "PLL" for hierarchy "PLL:ip_inst" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 72
-Info (12128): Elaborating entity "altpll" for hierarchy "PLL:ip_inst|altpll:altpll_component" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/PLL.v Line: 99
-Info (12130): Elaborated megafunction instantiation "PLL:ip_inst|altpll:altpll_component" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/PLL.v Line: 99
-Info (12133): Instantiated megafunction "PLL:ip_inst|altpll:altpll_component" with the following parameter: File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/PLL.v Line: 99
+Warning (10230): Verilog HDL assignment warning at accel.v(120): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 120
+Warning (10230): Verilog HDL assignment warning at accel.v(121): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 121
+Warning (10230): Verilog HDL assignment warning at accel.v(122): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 122
+Warning (10230): Verilog HDL assignment warning at accel.v(124): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 124
+Warning (10230): Verilog HDL assignment warning at accel.v(125): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 125
+Warning (10230): Verilog HDL assignment warning at accel.v(126): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 126
+Warning (10034): Output port "LEDR[6..0]" at accel.v(27) has no driver File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 27
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:CLOCK_DIV" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 63
+Warning (10230): Verilog HDL assignment warning at ClockDivider.v(19): truncated value with size 32 to match size of target (30) File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/output_files/ClockDivider.v Line: 19
+Info (12128): Elaborating entity "PLL" for hierarchy "PLL:ip_inst" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 72
+Info (12128): Elaborating entity "altpll" for hierarchy "PLL:ip_inst|altpll:altpll_component" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/PLL.v Line: 99
+Info (12130): Elaborated megafunction instantiation "PLL:ip_inst|altpll:altpll_component" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/PLL.v Line: 99
+Info (12133): Instantiated megafunction "PLL:ip_inst|altpll:altpll_component" with the following parameter: File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/PLL.v Line: 99
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1292,161 +1286,159 @@ Info (12133): Instantiated megafunction "PLL:ip_inst|altpll:altpll_component" wi
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: PLL_altpll File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/pll_altpll.v Line: 30
+    Info (12023): Found entity 1: PLL_altpll File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:ip_inst|altpll:altpll_component|PLL_altpll:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "spi_control" for hierarchy "spi_control:spi_ctrl" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 92
-Info (10264): Verilog HDL Case Statement information at spi_control.v(199): all case item expressions in this case statement are onehot File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/hdl/spi_control.v Line: 199
-Info (12128): Elaborating entity "spi_serdes" for hierarchy "spi_control:spi_ctrl|spi_serdes:serdes" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/hdl/spi_control.v Line: 127
-Warning (10230): Verilog HDL assignment warning at spi_serdes.v(78): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/hdl/spi_serdes.v Line: 78
-Warning (10230): Verilog HDL assignment warning at spi_serdes.v(91): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/hdl/spi_serdes.v Line: 91
-Info (12128): Elaborating entity "Averager" for hierarchy "Averager:AVG_MODULE_X" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 100
-Warning (10230): Verilog HDL assignment warning at Averager.v(19): truncated value with size 32 to match size of target (8) File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/output_files/Averager.v Line: 19
-Warning (10230): Verilog HDL assignment warning at Averager.v(22): truncated value with size 31 to match size of target (16) File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/output_files/Averager.v Line: 22
-Info (12128): Elaborating entity "seg7" for hierarchy "seg7:s0" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 129
+Info (12128): Elaborating entity "spi_control" for hierarchy "spi_control:spi_ctrl" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 92
+Info (10264): Verilog HDL Case Statement information at spi_control.v(199): all case item expressions in this case statement are onehot File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/hdl/spi_control.v Line: 199
+Info (12128): Elaborating entity "spi_serdes" for hierarchy "spi_control:spi_ctrl|spi_serdes:serdes" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/hdl/spi_control.v Line: 127
+Warning (10230): Verilog HDL assignment warning at spi_serdes.v(78): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/hdl/spi_serdes.v Line: 78
+Warning (10230): Verilog HDL assignment warning at spi_serdes.v(91): truncated value with size 32 to match size of target (4) File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/hdl/spi_serdes.v Line: 91
+Info (12128): Elaborating entity "Averager" for hierarchy "Averager:AVG_MODULE_X" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 101
+Warning (10230): Verilog HDL assignment warning at Averager.v(20): truncated value with size 32 to match size of target (8) File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/output_files/Averager.v Line: 20
+Warning (10230): Verilog HDL assignment warning at Averager.v(23): truncated value with size 31 to match size of target (16) File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/output_files/Averager.v Line: 23
+Info (12128): Elaborating entity "seg7" for hierarchy "seg7:s0" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 131
 Info (278001): Inferred 10 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 118
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 119
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 119
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 120
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 120
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod3" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 122
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 123
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod4" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 123
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div3" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 124
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod5" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 124
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 118
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 118
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 120
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 121
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 121
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 122
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 122
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod3" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 124
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 125
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod4" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 125
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div3" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 126
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod5" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 126
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 120
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 120
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_rll.tdf
-    Info (12023): Found entity 1: lpm_divide_rll File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/lpm_divide_rll.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_rll File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/lpm_divide_rll.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_qlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/sign_div_unsign_qlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/sign_div_unsign_qlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uhe.tdf
-    Info (12023): Found entity 1: alt_u_div_uhe File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_uhe File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/add_sub_t3c.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/add_sub_t3c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/add_sub_u3c.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 119
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 119
+    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/add_sub_u3c.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 121
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 121
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_otl.tdf
-    Info (12023): Found entity 1: lpm_divide_otl File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/lpm_divide_otl.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 120
-Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 120
+    Info (12023): Found entity 1: lpm_divide_otl File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/lpm_divide_otl.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 122
+Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 122
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_rtl.tdf
-    Info (12023): Found entity 1: lpm_divide_rtl File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/lpm_divide_rtl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_rtl File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/lpm_divide_rtl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_tlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_tlh File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/sign_div_unsign_tlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_tlh File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/sign_div_unsign_tlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_4ie.tdf
-    Info (12023): Found entity 1: alt_u_div_4ie File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_4ie.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_4ie File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_4ie.tdf Line: 27
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "GSENSOR_SDI" and its non-tri-state driver. File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 36
+    Warning (13035): Inserted always-enabled tri-state buffer between "GSENSOR_SDI" and its non-tri-state driver. File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 36
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GSENSOR_SDO" has no driver File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 38
+    Warning (13040): bidirectional pin "GSENSOR_SDO" has no driver File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 38
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "GSENSOR_SDI~synth" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 36
+    Warning (13010): Node "GSENSOR_SDI~synth" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 36
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 16
-    Warning (13410): Pin "HEX1[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 17
-    Warning (13410): Pin "HEX2[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 18
-    Warning (13410): Pin "HEX3[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 19
-    Warning (13410): Pin "HEX4[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 20
-    Warning (13410): Pin "HEX5[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 21
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 27
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 27
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 27
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 27
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 27
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 27
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 27
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 27
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 27
+    Warning (13410): Pin "HEX0[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 16
+    Warning (13410): Pin "HEX1[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 17
+    Warning (13410): Pin "HEX2[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 18
+    Warning (13410): Pin "HEX3[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 19
+    Warning (13410): Pin "HEX4[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 20
+    Warning (13410): Pin "HEX5[7]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 21
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 27
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 27
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 27
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 27
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 27
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 27
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 27
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 18 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 62
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_6_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 87
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_7_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 92
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_8_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 97
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 102
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 37
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 42
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 47
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 52
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 57
-    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 62
-    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 102
-    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 37
-    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 42
-    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 47
-    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 52
-    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 57
-    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 62
-    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_6_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 87
-    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_7_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 92
-    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_8_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 97
-    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 102
-    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 37
-    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 42
-    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 47
-    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 52
-    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 57
-    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 62
-    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 102
-    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 37
-    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 42
-    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 47
-    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 52
-    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/alt_u_div_uhe.tdf Line: 57
-Info (144001): Generated suppressed messages file C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/output_files/Accelerometer.map.smsg
+    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 62
+    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_6_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 87
+    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_7_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 92
+    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_8_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 97
+    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 102
+    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 37
+    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 42
+    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 47
+    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 52
+    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 57
+    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 62
+    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 102
+    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 37
+    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 42
+    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 47
+    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 52
+    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 57
+    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 62
+    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_6_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 87
+    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_7_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 92
+    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_8_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 97
+    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 102
+    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 37
+    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 42
+    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 47
+    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 52
+    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 57
+    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 62
+    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_9_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 102
+    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_10_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 37
+    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_11_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 42
+    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_12_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 47
+    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_13_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 52
+    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_14_result_int[0]~10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/alt_u_div_uhe.tdf Line: 57
+Info (144001): Generated suppressed messages file C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/output_files/Accelerometer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (15897): PLL "PLL:ip_inst|altpll:altpll_component|PLL_altpll:auto_generated|pll1" has parameter compensate_clock set to clock0 but port CLK[0] is not connected File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/pll_altpll.v Line: 44
-Warning (15899): PLL "PLL:ip_inst|altpll:altpll_component|PLL_altpll:auto_generated|pll1" has parameters clk0_multiply_by and clk0_divide_by specified but port CLK[0] is not connected File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/db/pll_altpll.v Line: 44
+Warning (15897): PLL "PLL:ip_inst|altpll:altpll_component|PLL_altpll:auto_generated|pll1" has parameter compensate_clock set to clock0 but port CLK[0] is not connected File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/pll_altpll.v Line: 44
+Warning (15899): PLL "PLL:ip_inst|altpll:altpll_component|PLL_altpll:auto_generated|pll1" has parameters clk0_multiply_by and clk0_divide_by specified but port CLK[0] is not connected File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/db/pll_altpll.v Line: 44
 Warning (21074): Design contains 15 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ADC_CLK_10" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 11
-    Warning (15610): No output dependent on input pin "MAX10_CLK2_50" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 13
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 24
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 30
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 30
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 30
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 30
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 30
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 30
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 30
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 30
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 30
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 30
-    Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 34
-    Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/accel.v Line: 34
-Info (21057): Implemented 1966 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "ADC_CLK_10" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 11
+    Warning (15610): No output dependent on input pin "MAX10_CLK2_50" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 13
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 30
+    Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 34
+    Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 34
+Info (21057): Implemented 1923 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 60 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1886 logic cells
+    Info (21061): Implemented 1843 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 4788 megabytes
-    Info: Processing ended: Wed Mar 13 20:19:57 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 4787 megabytes
+    Info: Processing ended: Thu Mar 14 13:52:33 2024
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/output_files/Accelerometer.map.smsg.
+The suppressed messages can be found in C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/output_files/Accelerometer.map.smsg.
 
 

@@ -96,14 +96,16 @@ Averager AVG_MODULE_X(
 	.data_in(data_x),
 	.average_val(avg_x),
 	.clk(clk_div),
-	.rst(reset_n)
+	.rst(reset_n),
+	.sign(LEDR[7])
 );
 
 Averager AVG_MODULE_Y(
 	.data_in(data_y),
 	.average_val(avg_y),
 	.clk(clk_div),
-	.rst(reset_n)
+	.rst(reset_n),
+	.sign(LEDR[8])
 );
 
 
@@ -150,4 +152,4 @@ seg7 s5 (
 	
 assign LEDR[9] = clk_div;
 
-endmodule 
+endmodule

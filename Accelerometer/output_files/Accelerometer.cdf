@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Users/jorgl/OneDrive/Escritorio/Accelerometer/output_files/") File("Accelerometer.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/output_files/") File("Accelerometer.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

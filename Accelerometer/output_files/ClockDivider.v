@@ -4,7 +4,7 @@ module ClockDivider(
     output reg clk_div
 );
 
-localparam target_count = 50_000_000 / 2000;
+localparam target_count = 50_000_000 / 5000;
 reg [29:0] count = 0;  // Explicit initialization for simulation
 
 always @(posedge clk or negedge rst) begin
