@@ -3,4 +3,4 @@ The purpose of this repo is to store the Verilog practices done during the cours
 
 Additionally, I included a brief paper where all the practices are presented along with their RTL views, test benches and physical testing. 
 
-![image](../Images/Altera.JPG)
+![image](Images/Altera.JPG)
