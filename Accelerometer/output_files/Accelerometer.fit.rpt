@@ -1,5 +1,5 @@
 Fitter report for Accelerometer
-Thu Mar 14 13:52:51 2024
+Tue Mar 19 20:41:35 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Mar 14 13:52:51 2024       ;
+; Fitter Status                      ; Successful - Tue Mar 19 20:41:35 2024       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Accelerometer                               ;
 ; Top-level Entity Name              ; accel                                       ;
@@ -158,14 +158,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.18        ;
+; Average used               ; 1.15        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.1%      ;
-;     Processor 3            ;   6.1%      ;
-;     Processor 4            ;   6.0%      ;
+;     Processor 2            ;   5.0%      ;
+;     Processor 3            ;   5.0%      ;
+;     Processor 4            ;   5.0%      ;
 +----------------------------+-------------+
 
 
@@ -2270,7 +2270,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.60 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.64 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2302,10 +2302,10 @@ Warning (169064): Following 2 pins have no output enable or a GND or VCC output 
     Info (169065): Pin GSENSOR_SDO has a permanently disabled output enable File: C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/accel.v Line: 38
 Info (144001): Generated suppressed messages file C:/Users/jorgl/OneDrive/Escritorio/Verilog_Practices/Accelerometer/output_files/Accelerometer.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 115 warnings
-    Info: Peak virtual memory: 5683 megabytes
-    Info: Processing ended: Thu Mar 14 13:52:52 2024
+    Info: Peak virtual memory: 5663 megabytes
+    Info: Processing ended: Tue Mar 19 20:41:36 2024
     Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +----------------------------+
