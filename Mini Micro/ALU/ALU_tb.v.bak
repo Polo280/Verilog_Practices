@@ -1,0 +1,11 @@
+module ALU_tb(
+	reg[3:0] instruction,
+	reg [31:0] num1, num2,
+	wire [31:0] result
+);
+
+initial begin
+
+end
+
+endmodule

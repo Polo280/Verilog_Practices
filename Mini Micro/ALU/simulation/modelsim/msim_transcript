@@ -1,0 +1,110 @@
+# Reading pref.tcl
+# do ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/BitwiseNot.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:35 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/BitwiseNot.v 
+# -- Compiling module BitwiseNot
+# 
+# Top level modules:
+# 	BitwiseNot
+# End time: 19:21:35 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:36 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 19:21:36 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/HalfAdder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:36 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/HalfAdder.v 
+# -- Compiling module HalfAdder
+# 
+# Top level modules:
+# 	HalfAdder
+# End time: 19:21:36 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/FullAdder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:36 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/FullAdder.v 
+# -- Compiling module FullAdder
+# 
+# Top level modules:
+# 	FullAdder
+# End time: 19:21:36 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Subtractor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:36 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Subtractor.v 
+# -- Compiling module Subtractor
+# 
+# Top level modules:
+# 	Subtractor
+# End time: 19:21:36 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:36 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Adder.v 
+# -- Compiling module Adder
+# 
+# Top level modules:
+# 	Adder
+# End time: 19:21:36 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro {C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:36 on Apr 14,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jorgl/OneDrive/Escritorio/MiniMicro" C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU_tb.v 
+# -- Compiling module ALU_tb
+# ** Warning: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU_tb.v(28): (vlog-2597) '4294967200' is being treated as 32-bit signed integer and will overflow.
+# ** Warning: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU_tb.v(31): (vlog-2597) '4294967200' is being treated as 32-bit signed integer and will overflow.
+# ** Warning: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU_tb.v(32): (vlog-2597) '4294967195' is being treated as 32-bit signed integer and will overflow.
+# ** Warning: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU_tb.v(35): (vlog-2597) '4294967200' is being treated as 32-bit signed integer and will overflow.
+# ** Warning: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU_tb.v(36): (vlog-2597) '4294967200' is being treated as 32-bit signed integer and will overflow.
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 19:21:36 on Apr 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" ALU_tb 
+# Start time: 19:21:37 on Apr 14,2024
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.Adder
+# Loading work.BitwiseNot
+# Loading work.Subtractor
+# Loading work.FullAdder
+# Loading work.HalfAdder
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$Stop' is not defined.
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU_tb.v Line: 43
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error (suppressible): (vsim-12023) Cannot execute undefined system task/function '$Stop'
+#    Time: 10 ns  Iteration: 0  Process: /ALU_tb/#INITIAL#20 File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU_tb.v Line: 43

@@ -1,0 +1,33 @@
+// A full adder based 32-bit subtractor module
+
+module Subtractor(
+	input [31:0] num1, num2,
+	output [31:0] result
+);
+
+// For complement of number 2
+wire [31:0] complement;
+assign complement = ~ num2;
+
+// Auxiliar variables for full adders
+wire [31:0] mid_carry;
+
+// Final carry
+wire carry_out;
+
+// Create 32 instances of full adders 
+genvar i;
+generate
+	for(i=0; i < 32; i = i+1) begin: full_adder_generate
+		FullAdder FullAdd(
+		.a(num1[i]),
+		.b(complement[i]),
+		.c_in(i == 0? 1 : mid_carry[i - 1]),  // First item is 1 because we have to add 1 to complement to get two's complement 
+		.s(result[i]),
+		.c_out(mid_carry[i])
+		);
+	end 
+endgenerate 
+
+// Final carry is the last item of mid carry
+assign carry_out = mid_carry[31];

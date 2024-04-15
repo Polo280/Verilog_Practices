@@ -1,0 +1,572 @@
+Analysis & Synthesis report for ALU
+Sun Apr 14 19:10:45 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
+ 12. Port Connectivity Checks: "Subtractor:SubCarry|FullAdder:full_adder_generate[0].FullAdd"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Apr 14 19:10:45 2024       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; ALU                                         ;
+; Top-level Entity Name              ; ALU                                         ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 376                                         ;
+;     Total combinational functions  ; 375                                         ;
+;     Dedicated logic registers      ; 36                                          ;
+; Total registers                    ; 36                                          ;
+; Total pins                         ; 105                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; ALU                ; ALU                ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                              ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
+; BitwiseNot.v                     ; yes             ; User Verilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/BitwiseNot.v ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU.v        ;         ;
+; HalfAdder.v                      ; yes             ; User Verilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/HalfAdder.v  ;         ;
+; FullAdder.v                      ; yes             ; User Verilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/FullAdder.v  ;         ;
+; Subtractor.v                     ; yes             ; User Verilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Subtractor.v ;         ;
+; Adder.v                          ; yes             ; User Verilog HDL File  ; C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Adder.v      ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 376         ;
+;                                             ;             ;
+; Total combinational functions               ; 375         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 199         ;
+;     -- 3 input functions                    ; 117         ;
+;     -- <=2 input functions                  ; 59          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 375         ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 36          ;
+;     -- Dedicated logic registers            ; 36          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 105         ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; result[2]~2 ;
+; Maximum fan-out                             ; 52          ;
+; Total fan-out                               ; 1477        ;
+; Average fan-out                             ; 2.38        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                       ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                 ; Entity Name ; Library Name ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------+-------------+--------------+
+; |ALU                                              ; 375 (174)           ; 36 (36)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 105  ; 0            ; 0          ; |ALU                                                                                ; ALU         ; work         ;
+;    |Adder:CarryAdder|                             ; 63 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder                                                               ; Adder       ; work         ;
+;       |FullAdder:full_adder_gen[0].FullAdders|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[0].FullAdders                        ; FullAdder   ; work         ;
+;       |FullAdder:full_adder_gen[10].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[10].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[10].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[11].FullAdders|   ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[11].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[11].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[12].FullAdders|   ; 3 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[12].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[12].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[13].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[13].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[13].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[14].FullAdders|   ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[14].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[14].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[15].FullAdders|   ; 3 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[15].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[15].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[16].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[16].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[16].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[17].FullAdders|   ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[17].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[17].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[18].FullAdders|   ; 3 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[18].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[18].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[19].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[19].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[19].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[1].FullAdders|    ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[1].FullAdders                        ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[1].FullAdders|HalfAdder:Adder2       ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[20].FullAdders|   ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[20].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[20].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[21].FullAdders|   ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[21].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[21].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[22].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[22].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[22].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[23].FullAdders|   ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[23].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[23].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[24].FullAdders|   ; 3 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[24].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[24].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[25].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[25].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[25].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[26].FullAdders|   ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[26].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[26].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[27].FullAdders|   ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[27].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[27].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[28].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[28].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[28].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[29].FullAdders|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[29].FullAdders                       ; FullAdder   ; work         ;
+;       |FullAdder:full_adder_gen[2].FullAdders|    ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[2].FullAdders                        ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[2].FullAdders|HalfAdder:Adder2       ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[30].FullAdders|   ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[30].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[30].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[31].FullAdders|   ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[31].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[31].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[3].FullAdders|    ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[3].FullAdders                        ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[3].FullAdders|HalfAdder:Adder2       ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[4].FullAdders|    ; 4 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[4].FullAdders                        ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[4].FullAdders|HalfAdder:Adder2       ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[5].FullAdders|    ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[5].FullAdders                        ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[5].FullAdders|HalfAdder:Adder2       ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[6].FullAdders|    ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[6].FullAdders                        ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[6].FullAdders|HalfAdder:Adder2       ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[7].FullAdders|    ; 3 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[7].FullAdders                        ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[7].FullAdders|HalfAdder:Adder2       ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[8].FullAdders|    ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[8].FullAdders                        ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[8].FullAdders|HalfAdder:Adder2       ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[9].FullAdders|    ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[9].FullAdders                        ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:CarryAdder|FullAdder:full_adder_gen[9].FullAdders|HalfAdder:Adder2       ; HalfAdder   ; work         ;
+;    |Adder:NormalAdder|                            ; 66 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder                                                              ; Adder       ; work         ;
+;       |FullAdder:full_adder_gen[0].FullAdders|    ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[0].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[0].FullAdders|HalfAdder:Adder1      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[10].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[10].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[10].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[11].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[11].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[11].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[12].FullAdders|   ; 3 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[12].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[12].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[13].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[13].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[13].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[14].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[14].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[14].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[15].FullAdders|   ; 3 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[15].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[15].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[16].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[16].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[16].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[17].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[17].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[17].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[18].FullAdders|   ; 3 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[18].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[18].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[19].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[19].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[19].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[1].FullAdders|    ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[1].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[1].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[20].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[20].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[20].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[21].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[21].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[21].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[22].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[22].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[22].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[23].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[23].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[23].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[24].FullAdders|   ; 3 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[24].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[24].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[25].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[25].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[25].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[26].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[26].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[26].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[27].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[27].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[27].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[28].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[28].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[28].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[29].FullAdders|   ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[29].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[29].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[2].FullAdders|    ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[2].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[2].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[30].FullAdders|   ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[30].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[30].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[31].FullAdders|   ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[31].FullAdders                      ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[31].FullAdders|HalfAdder:Adder2     ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[3].FullAdders|    ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[3].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[3].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[4].FullAdders|    ; 3 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[4].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[4].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[5].FullAdders|    ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[5].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[5].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[6].FullAdders|    ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[6].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[6].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[7].FullAdders|    ; 3 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[7].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[7].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[8].FullAdders|    ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[8].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[8].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_gen[9].FullAdders|    ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[9].FullAdders                       ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Adder:NormalAdder|FullAdder:full_adder_gen[9].FullAdders|HalfAdder:Adder2      ; HalfAdder   ; work         ;
+;    |Subtractor:SubCarry|                          ; 72 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry                                                            ; Subtractor  ; work         ;
+;       |FullAdder:full_adder_generate[10].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[10].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[10].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[11].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[11].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[11].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[12].FullAdd| ; 3 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[12].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[12].FullAdd|HalfAdder:Adder1 ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[12].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[13].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[13].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[13].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[14].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[14].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[14].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[15].FullAdd| ; 3 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[15].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[15].FullAdd|HalfAdder:Adder1 ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[15].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[16].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[16].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[16].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[17].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[17].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[17].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[18].FullAdd| ; 3 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[18].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[18].FullAdd|HalfAdder:Adder1 ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[18].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[19].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[19].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[19].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[1].FullAdd|  ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[1].FullAdd                   ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[1].FullAdd|HalfAdder:Adder2  ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[20].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[20].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[20].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[21].FullAdd| ; 3 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[21].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[21].FullAdd|HalfAdder:Adder1 ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[21].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[22].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[22].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[22].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[23].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[23].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[23].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[24].FullAdd| ; 3 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[24].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[24].FullAdd|HalfAdder:Adder1 ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[24].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[25].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[25].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[25].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[26].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[26].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[26].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[27].FullAdd| ; 3 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[27].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[27].FullAdd|HalfAdder:Adder1 ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[27].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[28].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[28].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[28].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[29].FullAdd| ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[29].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[29].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[2].FullAdd|  ; 3 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[2].FullAdd                   ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[2].FullAdd|HalfAdder:Adder1  ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[2].FullAdd|HalfAdder:Adder2  ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[30].FullAdd| ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[30].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[30].FullAdd|HalfAdder:Adder1 ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[30].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[31].FullAdd| ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[31].FullAdd                  ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[31].FullAdd|HalfAdder:Adder1 ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[31].FullAdd|HalfAdder:Adder2 ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[3].FullAdd|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[3].FullAdd                   ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[3].FullAdd|HalfAdder:Adder1  ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[3].FullAdd|HalfAdder:Adder2  ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[4].FullAdd|  ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[4].FullAdd                   ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[4].FullAdd|HalfAdder:Adder1  ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[4].FullAdd|HalfAdder:Adder2  ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[5].FullAdd|  ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[5].FullAdd                   ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[5].FullAdd|HalfAdder:Adder2  ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[6].FullAdd|  ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[6].FullAdd                   ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[6].FullAdd|HalfAdder:Adder2  ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[7].FullAdd|  ; 3 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[7].FullAdd                   ; FullAdder   ; work         ;
+;          |HalfAdder:Adder1|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[7].FullAdd|HalfAdder:Adder1  ; HalfAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[7].FullAdd|HalfAdder:Adder2  ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[8].FullAdd|  ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[8].FullAdd                   ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[8].FullAdd|HalfAdder:Adder2  ; HalfAdder   ; work         ;
+;       |FullAdder:full_adder_generate[9].FullAdd|  ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[9].FullAdd                   ; FullAdder   ; work         ;
+;          |HalfAdder:Adder2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|Subtractor:SubCarry|FullAdder:full_adder_generate[9].FullAdd|HalfAdder:Adder2  ; HalfAdder   ; work         ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; flags[3]~reg0                         ; Stuck at GND due to stuck port data_in ;
+; adder_cin                             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 36    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 16:1               ; 30 bits   ; 300 LEs       ; 90 LEs               ; 210 LEs                ; Yes        ; |ALU|result[2]~reg0        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; ADCS           ; 6     ; Signed Integer                             ;
+; ADD            ; 7     ; Signed Integer                             ;
+; MULS           ; 8     ; Signed Integer                             ;
+; MVNS           ; 9     ; Signed Integer                             ;
+; NOP            ; 10    ; Signed Integer                             ;
+; ORRS           ; 11    ; Signed Integer                             ;
+; SBCS           ; 12    ; Signed Integer                             ;
+; SUB            ; 13    ; Signed Integer                             ;
+; TST            ; 14    ; Signed Integer                             ;
+; NEGATIVE       ; 0     ; Signed Integer                             ;
+; ZERO           ; 1     ; Signed Integer                             ;
+; CARRY          ; 2     ; Signed Integer                             ;
+; OVERFLOW       ; 3     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Subtractor:SubCarry|FullAdder:full_adder_generate[0].FullAdd" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; c_in ; Input ; Info     ; Stuck at VCC                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 105                         ;
+; cycloneiii_ff         ; 36                          ;
+;     plain             ; 36                          ;
+; cycloneiii_lcell_comb ; 376                         ;
+;     normal            ; 376                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 59                          ;
+;         3 data inputs ; 117                         ;
+;         4 data inputs ; 199                         ;
+;                       ;                             ;
+; Max LUT depth         ; 32.00                       ;
+; Average LUT depth     ; 19.17                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sun Apr 14 19:10:33 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file bitwisenot.v
+    Info (12023): Found entity 1: BitwiseNot File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/BitwiseNot.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.v
+    Info (12023): Found entity 1: ALU_tb File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file halfadder.v
+    Info (12023): Found entity 1: HalfAdder File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/HalfAdder.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder.v
+    Info (12023): Found entity 1: FullAdder File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/FullAdder.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file subtractor.v
+    Info (12023): Found entity 1: Subtractor File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Subtractor.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file adder.v
+    Info (12023): Found entity 1: Adder File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Adder.v Line: 3
+Info (12127): Elaborating entity "ALU" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ALU.v(13): object "prev_flags" assigned a value but never read File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU.v Line: 13
+Info (12128): Elaborating entity "Adder" for hierarchy "Adder:NormalAdder" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU.v Line: 24
+Info (12128): Elaborating entity "FullAdder" for hierarchy "Adder:NormalAdder|FullAdder:full_adder_gen[0].FullAdders" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/Adder.v Line: 23
+Info (12128): Elaborating entity "HalfAdder" for hierarchy "Adder:NormalAdder|FullAdder:full_adder_gen[0].FullAdders|HalfAdder:Adder1" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/FullAdder.v Line: 20
+Info (12128): Elaborating entity "BitwiseNot" for hierarchy "BitwiseNot:BitNotModule" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU.v Line: 49
+Info (12128): Elaborating entity "Subtractor" for hierarchy "Subtractor:SubCarry" File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU.v Line: 58
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "flags[3]" is stuck at GND File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU.v Line: 92
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 481 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 69 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 376 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Sun Apr 14 19:10:45 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:27
+
+

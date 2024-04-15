@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at ALU.v(66): always construct contains both blocking and non-blocking assignments File: C:/Users/jorgl/OneDrive/Escritorio/MiniMicro/ALU.v Line: 66
